@@ -1,0 +1,18 @@
+var text = "gorgeous stuio \
+in beautiful Chicago.";
+var city = "Chicago";
+var hits = [];
+
+for(var i=0; i < text.length; i++){
+if (text[i] === city[0]){
+for(j = i; j < i + city.length; j++){
+if(text[j]===city[j-i]){
+hits.push(text[j]);
+}
+}
+}
+}
+
+if (hits.length > 2 ){
+console.log(hits);
+}else {console.log("City Not here");}
